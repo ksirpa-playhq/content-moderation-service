@@ -1,0 +1,26 @@
+{
+  "name": "content-moderation",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/testTextModeration.ts",
+    "test-image": "ts-node src/testImageModeration.ts",
+    "test-text": "ts-node src/testTextModeration.ts",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
+  },
+  "dependencies": {
+    "@google-cloud/language": "^5.0.0",
+    "@google-cloud/vision": "^4.3.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
